@@ -2,5 +2,5 @@
 Projektni zadatak 2
 
 ## Upute za instalaciju
-Kloniraj repozitorij
-Kreiraj virtualnu okolinu
+1. Kloniraj repozitorij
+2. Kreiraj virtualnu okolinu
