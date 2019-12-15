@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="utf-8">
+        <title>Celeste Pizza</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/mobile-css.css">
+        <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="content">    
+
+            {% include 'nav.html' %}
+
+            <button id="navbutton" class="navbutton" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>  
+
+            {% include 'sidebar.html' %}
+
+            <div class="image1">
+                <div class="hero-text">
+                    <img src="../static/images/logo.png">
+                    <h1 style="font-size: 4em;">CELESTE PIZZA</h1>
+                </div>
+            </div>
+        
+            <div class="intro">
+
+                <h3 id="big-text">
+                    UŽIVAJTE U VRHUNSKOJ HRANI PO PRIHVATLJIVIM CIJENAMA U UGODNOM AMBIJENTU U CENTRU GRADA, UZ LJUBAZNO OSOBLJE.
+                </h3>
+
+            </div>
+
+            <div class="image2" id="usluge">
+                <div class="hero-text">
+                    <h1 style="font-size: 4em;">NAŠE USLUGE</h1>
+                </div>
+            </div>
+
+            <div class="usluge">
+
+                <div class="cards">
+                    <div class="card mx-auto">
+                        <img src="../static/images/taxi-pizza.jpg" alt="Taxi pizza" style="width:100%">
+                        <div class="card-container">
+                            <h4><b>Taxi pizza</b></h4> 
+                            <p>Uživati u našim specijalitetima možete online narudžbom!</p> 
+                        </div>
+                    </div>
+                    <div class="card mx-auto">
+                        <img src="../static/images/pizzeria.jpg" alt="Pizzeria" style="width:100%">
+                        <div class="card-container">
+                            <h4><b>Pizzeria</b></h4> 
+                            <p>Uživajte u vrhunskoj hrani po prihvatljivim cijenama.</p> 
+                        </div>
+                    </div>
+                    <div class="card mx-auto">
+                        <img src="../static/images/bistro.jpg" alt="Bistro" style="width:100%">
+                        <div class="card-container">
+                            <h4><b>Bistro</b></h4> 
+                            <p>Uživajte u vrhunskoj hrani u ugodnom ambijentu u centru grada.</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image3" id="meni">
+                <div class="hero-text">
+                    <h1 style="font-size: 4em;">MENI</h1>
+                </div>
+            </div>
+
+            <div class="meni">
+                <div class="cards2">
+                    <div class="card2 mx-auto">
+                        <img class="card-image2" src="../static/images/pizzas/mijesana.png" alt="Miješana pizza">
+                        <div class="card-container2">
+                            <p><b>PIZZA MIJEŠANA</b></p>
+                            <p>(sir, šunka, rajčica, šampinjoni, masline)</p>
+                        </div>
+                        <div class="cijena">
+                            <p>30.00kn</p>
+                        </div>
+                    </div>
+                    <div class="card2 mx-auto">
+                        <img class="card-image2" src="../static/images/pizzas/margharita.png" alt="Pizza margharita">
+                        <div class="card-container2">
+                            <p><b>PIZZA MARGHARITA</b></p>
+                            <p>(sir, rajčica, masline)</p>
+                        </div>
+                        <div class="cijena">
+                            <p>30.00kn</p>
+                        </div>
+                    </div>
+                    <div class="card2 mx-auto">
+                        <img class="card-image2" src="../static/images/pizzas/fungi.png" alt="Pizza fungi">
+                        <div class="card-container2">
+                            <p><b>PIZZA FUNGI</b></p>
+                            <p>(sir, rajčica, šampinjoni, masline)</p>
+                        </div>
+                        <div class="cijena">
+                            <p>35.00kn</p>
+                        </div>
+                    </div>
+                    <div class="card2 mx-auto">
+                        <img class="card-image2" src="../static/images/pizzas/4_vrste_sira.png" alt="Pizza 4 vrste sira">
+                        <div class="card-container2">
+                            <p><b>PIZZA 4 VRSTE SIRA</b></p>
+                            <p>(rajčica, gauda, mozzarella, camembert, gorgonzola, masline)</p>
+                        </div>
+                        <div class="cijena">
+                            <p>45.00kn</p>
+                        </div>
+                    </div>
+                    <div class="card2 mx-auto">
+                        <img class="card-image2" src="../static/images/pizzas/mexicana.png" alt="Pizza mexicana">
+                        <div class="card-container2">
+                            <p><b>PIZZA MEXICANA</b></p>
+                            <p>(sir, rajčica, kulen, kukuruz, grah, ljuti feferoni, domaća kobasica)</p>
+                        </div>
+                        <div class="cijena">
+                            <p>40.00kn</p>
+                        </div>
+                    </div>
+                    <div class="card2 mx-auto">
+                        <img class="card-image2" src="../static/images/pizzas/hawaii.png" alt="Pizza hawaii">
+                        <div class="card-container2">
+                            <p><b>PIZZA HAWAII</b></p>
+                            <p>(sir, škampi, ananas, masline)</p>
+                        </div>
+                        <div class="cijena">
+                            <p>50.00kn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% include 'footer.html' %}
+            
+        </div>
+        
+        <script>
+            var navbutton = document.getElementById("navbutton");
+            var sidebar = document.getElementById("mySidebar");
+            var open = false;
+
+            function toggleMenu() {
+                if(open == false) {
+                    sidebar.style.width = "50%";
+                    open = true;
+                    navbutton.classList.toggle("change");
+                } else {
+                    sidebar.style.width = "0";
+                    open = false;
+                    navbutton.classList.toggle("change");
+                }
+            }
+
+            var links = sidebar.getElementsByClassName("link");
+
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+
+        </script>
+
+    </body>
+</html>

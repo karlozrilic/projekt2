@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="utf-8">
+        <title>Celeste Pizza</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/mobile-css.css">
+        <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="content">    
+
+            {% include 'nav.html' %}
+
+            <button id="navbutton" class="navbutton" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>  
+
+            {% include 'sidebar.html' %}
+
+            <div class="kontakt">
+                <div class="hero-text">
+                    <img src="../static/images/logo.png">
+                    <h1 style="font-size: 4em;">CELESTE PIZZA</h1>
+                </div>
+            </div>
+        
+            <div class="intro">
+
+                <h3 id="text">
+                    KONTAKT INFO
+                </h3>
+
+                <p id="text2">
+                   <p><b>Telefon: </b>+385 12 345 678</p>
+                   <p><b>Fax: </b>+385 87 654 321</p>
+                   <p><b>MB: </b>1234567</p>
+                   <p><b>OIB: </b>01234567891</p>
+                   <p><b>E-mail: </b>info@celeste-pizza.hr</p>
+                </p>
+                  
+            </div>
+
+            {% include 'footer.html' %}
+
+        </div>
+        
+        <script>
+            var navbutton = document.getElementById("navbutton");
+            var sidebar = document.getElementById("mySidebar");
+            var open = false;
+
+            function toggleMenu() {
+                if(open == false) {
+                    sidebar.style.width = "50%";
+                    open = true;
+                    navbutton.classList.toggle("change");
+                } else {
+                    sidebar.style.width = "0";
+                    open = false;
+                    navbutton.classList.toggle("change");
+                }
+            }
+
+            var links = sidebar.getElementsByClassName("link");
+
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+
+        </script>
+
+    </body>
+</html>
