@@ -1,0 +1,58 @@
+@media only screen and (max-width: 600px) {
+    .navbutton {
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: visible;
+    }
+    #navbutton{
+        visibility: visible;
+    }
+    #links{
+        display: none;
+    }
+    .grid-container {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-gap: 10px;
+    }
+    .ime-prezime{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .e-mail{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .poruka {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .submit {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .card {
+        width: 400px;
+    }
+    .card2 {
+        width: 400px;
+    }
+    .footer-element{
+        width: 400px;
+        padding-top: 20px;
+    }
+}
