@@ -26,7 +26,6 @@ img {
     position: relative;
     padding: 20px 0 40px 0;
     margin: -30px 0 -30px 0;
-    z-index: 1;
 }
 #links{
     /* Fixed position */
@@ -245,7 +244,6 @@ a:hover{
     padding: 40px 0 20px 0 ;
     background-color: grey;
     position: absolute;
-    bottom: 0;
     width: 100%;
 
     display: flex;
