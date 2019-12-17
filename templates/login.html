@@ -27,30 +27,11 @@
             {% include 'sidebar.html' %}
 
         
-            <div class="intro intro-login" style="margin-top: 50px; background-image: none;">
-
-                {% extends "bootstrap/base.html" %}
-                {% import "bootstrap/wtf.html" as wtf %}
-
-                {% block styles %}
-                {{super()}}
-                <link rel="stylesheet" href="{{url_for('.static', filename='css/reset.css')}}">
-                <link rel="stylesheet" href="{{url_for('.static', filename='css/bootstrap.min.css')}}">
-                <link rel="stylesheet" href="{{url_for('.static', filename='css/style.css')}}">
-                <link rel="stylesheet" href="{{url_for('.static', filename='css/mobile-css.css')}}">
-                {% endblock %}
-
-                {% block content %}
-                <div class="container">
-                    <div class="page-header">
-                        <h1>Hello, {% if username%}{{ username}}{% else %}Stranger{% endif %}!</h1>
-                        {{ wtf.quick_form(form) }}
-                    </div>
-                </div>
-
-                {% endblock %}
+            <div class="intro intro-login" style="margin: 0px 0 0 0; background-image: none;">
+                {% include 'forma.html' %}
             </div>
-            </div>
+
+            {% include 'footer.html' %}
 
         </div>
         
